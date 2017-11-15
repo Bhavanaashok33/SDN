@@ -55,7 +55,7 @@ i++;
 
  char string[15];
 
-system("ping 10.10.1.1 -c 1");
+//system("ping 10.10.1.1 -c 1");
 }
 
 int main(void)
@@ -67,7 +67,7 @@ int ip_addr[24];
 char output[6];
 unsigned long int period=0;
 FILE *myfile;
-myfile=fopen("time_walltime.text", "a");
+myfile=fopen("time_cputime_lfsr.text", "a");
 clock_t t;
 t=clock();
 double tume_spent;
@@ -82,7 +82,7 @@ time_t curtime;
 gettimeofday(&tv,NULL);
 curtime=tv.tv_sec;
 strftime(buffer,30,"%T.",localtime(&curtime));
-printf("%s%ld\n",buffer,tv.tv_usec);
+//printf("%s%ld\n",buffer,tv.tv_usec);
 
 
 int clockcycle=0;
@@ -107,8 +107,8 @@ while(clockcycle!=1);
 
 t=clock()-t;
 double time_taken =((double)t)/CLOCKS_PER_SEC;
-//fprintf(myfile,"%f seconds", time_taken);
-//fprintf(myfile,"\n");
+fprintf(myfile,"%f seconds", time_taken);
+fprintf(myfile,"\n");
 
 char buffer2[230];
 struct timeval tv2;
@@ -116,11 +116,11 @@ time_t curtime2;
 gettimeofday(&tv2,NULL);
 curtime2=tv2.tv_sec;
 strftime(buffer2,30,"%T.",localtime(&curtime2));
-printf("%s%ld seconds\n",buffer2,tv2.tv_usec);
+//printf("%s%ld seconds\n",buffer2,tv2.tv_usec);
 
 printf("%f\n",float(tv2.tv_usec-tv.tv_usec)/1000);
-fprintf(myfile,"%f seconds", float(tv2.tv_usec-tv.tv_usec)/1000);
-fprintf(myfile,"\n");
+//fprintf(myfile,"%f seconds", float(tv2.tv_usec-tv.tv_usec)/1000);
+//fprintf(myfile,"\n");
 return 0;
 }
 
