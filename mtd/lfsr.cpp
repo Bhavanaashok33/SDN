@@ -67,7 +67,7 @@ int ip_addr[24];
 char output[6];
 unsigned long int period=0;
 FILE *myfile;
-myfile=fopen("time.text", "a");
+myfile=fopen("time_cpu.text", "a");
 clock_t t;
 t=clock();
 double tume_spent;
