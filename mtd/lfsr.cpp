@@ -98,7 +98,7 @@ sprintf(output,"%X",lfsr);
 convertDectoHex(output,ip_addr);
 ++period;
 }
-while(lfsr !=start_state && period!=1);
+while(lfsr !=start_state && period!=10000);
 printf("period cycle %d : %lu \n",clockcycle+1,period);
 period=0;
 clockcycle ++;
