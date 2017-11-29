@@ -55,7 +55,7 @@ i++;
 
  char string[15];
 
-system("ping 10.10.1.1 -c 1");
+system("ping 10.10.4.1 -c 1");
 }
 
 int main(void)
@@ -67,7 +67,7 @@ int ip_addr[24];
 char output[6];
 unsigned long int period=0;
 FILE *myfile;
-myfile=fopen("lfsr_cpu.text", "a");
+myfile=fopen("lfsrping_cpu.text", "a");
 clock_t t;
 t=clock();
 

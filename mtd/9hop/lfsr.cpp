@@ -55,7 +55,7 @@ i++;
 
  char string[15];
 
-system("ping 10.10.1.1 -c 1");
+system("ping 10.10.9.1 -c 1");
 }
 
 int main(void)
@@ -115,7 +115,7 @@ sprintf(output,"%X",lfsr);
 
 //fprintf(myfile,"%f seconds", float(tv2.tv_usec-tv.tv_usec)/1000);                                                                        
 //fprintf(myfile,"\n");   
-convertDectoHex(output,ip_addr);
+//convertDectoHex(output,ip_addr);
 ++period;
 }
 while(lfsr !=start_state && period!=1);
